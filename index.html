@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>TutorSensi</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background-color: #0d0d0d;
+      color: #d3d3d3;
+      line-height: 1.6;
+    }
+
+    header {
+      background-color: #1c1c1c;
+      padding: 20px 20px 40px;
+      text-align: center;
+      box-shadow: 0 0 10px #111;
+      animation: fadeIn 1.2s ease;
+    }
+
+    .profile-image {
+      width: 180px;
+      height: 180px;
+      border-radius: 50%;
+      box-shadow: 0 0 15px #000;
+      margin: 0 auto 20px;
+      display: block;
+      animation: zoomFade 1.2s ease-in-out;
+    }
+
+    header h1 {
+      color: #d4af37;
+      font-size: 3em;
+      font-weight: 900;
+      letter-spacing: 2px;
+      margin-bottom: 5px;
+    }
+
+    header p {
+      color: #bbbbbb;
+      font-size: 1.2em;
+      font-weight: 400;
+      font-style: italic;
+      letter-spacing: 1.5px;
+      margin-top: 0;
+    }
+
+    section {
+      background-color: #1a1a1a;
+      border: 1px solid #2e2e2e;
+      border-radius: 10px;
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 20px;
+      box-shadow: 0 0 10px #111;
+      opacity: 0;
+      transform: translateY(40px);
+      transition: all 0.8s ease-out;
+    }
+
+    section.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    h2 {
+      color: #ffffff;
+      font-size: 2em;
+      margin-bottom: 20px;
+      border-bottom: 2px solid #444;
+      padding-bottom: 5px;
+    }
+
+    .social-icons {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin-top: 10px;
+    }
+
+    .social-icons a img {
+      width: 40px;
+      height: 40px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .social-icons a img:hover {
+      transform: scale(1.15);
+      box-shadow: 0 0 10px #4aa8d8;
+    }
+
+    form input,
+    form textarea {
+      background: #111;
+      color: #fff;
+      border: 1px solid #444;
+      padding: 10px;
+      width: 100%;
+      border-radius: 5px;
+      margin-bottom: 10px;
+    }
+
+    form button {
+      background-color: #4aa8d8;
+      color: #fff;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      animation: glowPulse 2s infinite;
+    }
+
+    form button:hover {
+      background-color: #3a94be;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      color: #666;
+      font-size: 14px;
+    }
+
+    @keyframes zoomFade {
+      0% { transform: scale(0.8); opacity: 0; }
+      100% { transform: scale(1); opacity: 1; }
+    }
+
+    @keyframes glowPulse {
+      0% { box-shadow: 0 0 5px #4aa8d8; }
+      50% { box-shadow: 0 0 15px #4aa8d8; }
+      100% { box-shadow: 0 0 5px #4aa8d8; }
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="https://i.pinimg.com/736x/0d/c5/1c/0dc51c78e5edb1f47c08fd5824813fa0.jpg" alt="Profile" class="profile-image" />
+    <h1>TutorSensi</h1>
+    <p>Professional Web & App Developer</p>
+  </header>
+
+  <section>
+    <h2>About Me</h2>
+    <p>Hello! I'm a passionate web and app developer who loves turning ideas into reality through clean and efficient code. I specialize in front-end development with a strong focus on modern design, performance, and user experience.</p>
+    <p>My name is Arafat. I am currently 17 years old and I live in Bangladesh.</p>
+  </section>
+
+  <section>
+    <h2>Social Media</h2>
+    <div class="social-icons">
+      <a href="https://www.facebook.com/ar.afat3261" target="_blank"><img src="https://img.icons8.com/color/48/facebook-new.png" alt="Facebook"/></a>
+      <a href="https://www.youtube.com/channel/UC3HBiRJn73tOmEygRZ577xg" target="_blank"><img src="https://img.icons8.com/color/48/youtube-play.png" alt="YouTube"/></a>
+      <a href="https://www.instagram.com/1x_arafat" target="_blank"><img src="https://img.icons8.com/color/48/instagram-new.png" alt="Instagram"/></a>
+      <a href="https://discord.com/users/1390276268326518877" target="_blank"><img src="https://img.icons8.com/color/48/discord-logo.png" alt="Discord"/></a>
+    </div>
+  </section>
+
+  <section>
+    <h2>Contact Me</h2>
+    <p>If you want to build a professional website or app, feel free to contact me below.</p>
+    <form action="https://formspree.io/f/movwgzro" method="POST">
+      <input type="text" name="name" placeholder="Your Name" required />
+      <input type="email" name="email" placeholder="Your Email" required />
+      <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
+  <footer>
+    &copy; 2025 TutorSensi. All rights reserved. Email: tutorsensi1@gmail.com
+  </footer>
+
+  <script>
+    const sections = document.querySelectorAll("section");
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("visible");
+        }
+      });
+    }, { threshold: 0.15 });
+
+    sections.forEach(section => observer.observe(section));
+  </script>
+</body>
+</html>
